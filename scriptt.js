@@ -169,7 +169,33 @@ botonClientes.addEventListener("click", () =>{
 
 
 
+$(() => {
+    console.log('p')
+    
+    $('#formCliente').append(
+        `
+    
+    <div class="mb-3">
+      <input type="text" class="form-control" id="nombre" placeholder="Apellido y nombre">
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" id="email" placeholder="Correo electronico">
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" id="dni" placeholder="Dni">
+    </div>
+    <div class="mb-3">
+      <input type="password" id="contraseña" class="form-control" placeholder="Contraseña" aria-describedby="passwordHelpBlock">
+    </div>
+    <div class="mb-3">
+      <input type="password" id="confirmarContraseña" class="form-control" placeholder="Confirmar contraseña" aria-describedby="passwordHelpBlock">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Confirmar</button>
+   
+    
 
+    `)})
 
 
 
