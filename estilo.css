@@ -7803,3 +7803,24 @@ textarea.form-control-lg {
     display: inline-flex !important; }
   .d-print-none {
     display: none !important; } }
+.ventanilla{
+    background-color: blueviolet;
+    width: 40%;
+    color: cornsilk;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 33px;
+    min-height: 250px;
+    border-radius: 22px;
+    position: absolute;
+    left: 35%;
+    top: 15%;
+    display: none;
+}
+.imgcerrar{width: 27px;}
+#cerrarVent{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
