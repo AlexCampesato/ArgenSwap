@@ -83,6 +83,18 @@ let boton2  =  document.getElementById("botonComprarEthereum")
 
         document.getElementById("monedaRecibida").innerHTML = `${resultado} ETH`; 
 
+        $('#boxComplete').animate({
+            height: "20px",
+            width: "300px"
+        }, {
+            duration: 1000,
+            easing: "linear",
+            complete: function(){
+                $(this).after("<p> La transaccion fue realizada con exito</p>")
+                
+                $('#boxComplete').remove()
+            }
+        })
     })
 
 let boton3  =  document.getElementById("botonComprarUsdt")
@@ -100,6 +112,18 @@ let boton3  =  document.getElementById("botonComprarUsdt")
 
         document.getElementById("monedaRecibida").innerHTML = `${resultado} USDT`; 
         
+        $('#boxComplete').animate({
+            height: "20px",
+            width: "300px"
+        }, {
+            duration: 1000,
+            easing: "linear",
+            complete: function(){
+                $(this).after("<p> La transaccion fue realizada con exito</p>")
+                
+                $('#boxComplete').remove()
+            }
+        })
     })
 
 function cerrarVentana(){
