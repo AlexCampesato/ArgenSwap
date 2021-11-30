@@ -52,6 +52,19 @@ let boton1  =  document.getElementById("botonComprarBitcoin")
 
         document.getElementById("monedaRecibida").innerHTML = `${resultado} BTC`; 
 
+        $('#boxComplete').animate({
+            height: "20px",
+            width: "300px"
+        }, {
+            duration: 1000,
+            easing: "linear",
+            complete: function(){
+                $(this).after("<p> La transaccion fue realizada con exito</p>")
+                
+                $('#boxComplete').remove()
+            }
+        })
+
 
     })
 
@@ -139,8 +152,8 @@ formCliente.addEventListener("submit", (e) => {
     e.preventDefault()
     console.log(e.target)
     let datosFormulario= new FormData(e.target)
-    const cliente= new Cliente (datosFormulario.get("nombre"), datosFormulario.get("apellido"), datosFormulario.get("edad"), datosFormulario.get("dni"), datosFormulario.get("email"))
-    clientes.push(cliente)
+    const Cliente= new Cliente (datosFormulario.get("nombre"), datosFormulario.get("apellido"), datosFormulario.get("edad"), datosFormulario.get("Dni"), datosFormulario.get("email"))
+    clientes.push(Cliente)
     localStorage.setItem('clientes',JSON.stringify(clientes))
     formCliente.reset()
 })
@@ -170,7 +183,6 @@ botonClientes.addEventListener("click", () =>{
 
 
 $(() => {
-    console.log('p')
     
     $('#formCliente').append(
         `
@@ -191,7 +203,7 @@ $(() => {
       <input type="password" id="confirmarContraseña" class="form-control" placeholder="Confirmar contraseña" aria-describedby="passwordHelpBlock">
     </div>
     
-    <button type="submit" class="btn btn-primary">Confirmar</button>
+    <button id="submit" type="submit" class="btn btn-primary">Confirmar</button>
    
     
 
@@ -200,13 +212,14 @@ $(() => {
 
 
 
-/*
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
-*/
+/*---------animacion----------*/
+$('#tituloAnimate').animate({
+    "font-size":"40px",
+    "padding":"30px",
+    },
+    "slow",
+    function(){
+        console.log("animacionterminada")
+    }
+).fadeOut(5000).fadeIn(5000)
+  

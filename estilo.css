@@ -2996,7 +2996,8 @@ textarea.form-control-lg {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background-color: #2179F4; }
   .navbar > .container,
   .navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl {
     display: flex;
@@ -7803,24 +7804,3 @@ textarea.form-control-lg {
     display: inline-flex !important; }
   .d-print-none {
     display: none !important; } }
-.ventanilla{
-    background-color: blueviolet;
-    width: 40%;
-    color: cornsilk;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    text-align: center;
-    padding: 33px;
-    min-height: 250px;
-    border-radius: 22px;
-    position: absolute;
-    left: 35%;
-    top: 15%;
-    display: none;
-}
-.imgcerrar{width: 27px;}
-#cerrarVent{
-    position: absolute;
-    right: 8px;
-    top: 8px;
-}

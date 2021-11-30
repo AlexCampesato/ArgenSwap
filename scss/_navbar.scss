@@ -21,6 +21,7 @@
   align-items: center;
   justify-content: space-between; // space out brand from logo
   @include gradient-bg();
+  background-color: #2179F4;
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.
