@@ -20,6 +20,12 @@
     top: 8px;
 }
 
+/*---------Animaciones----------*/
+
+#tituloAnimate{
+    margin-left: 20%;
+}
+
 .box{
     background-color: green;
     height: 20px;
@@ -32,4 +38,10 @@
 font-size: 17px;
 font-weight: 600;
 color: white
+}
+
+/*----------LABEL DINERO--------*/
+.ingresoDinero{
+    padding-left: 30%;
+    padding-top: 50px;
 }
