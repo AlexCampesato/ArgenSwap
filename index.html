@@ -6,6 +6,7 @@
     <meta name="description" content="Broker de intercambio de criptomonedas">
     <meta name="keywords" content=" criptomonedas, broker, inversion, defi, dolar">
     <meta name="generator" content="Hugo 0.80.0">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <title>ArgenSwap</title>
 
 
@@ -16,8 +17,8 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="estilo.css" rel="stylesheet">
-    <link href="estile.css" rel="stylesheet">
+    <link href="pagPrincipal/estilo.css" rel="stylesheet">
+    <link href="pagPrincipal/estile.css" rel="stylesheet">
     
 
 
@@ -64,7 +65,15 @@
                       </li>
                     </ul>
                   </div>
-                  <button id="botonRegistrarse">Registrarse</button>
+                  <a href='app.html' id='cerrar-secion'>Cerrar Sesion</a>
+                    <script>
+                    //Cerrar sesion 
+                    $('#cerrar-secion').click(function(){
+                        localStorage.clear();
+                        window.location = "app.html";
+                    });
+                    </script>
+
                   <button id="botonMostrarClientes">Mi cuenta</button>
                   <div id="divClientes"></div>
                 </div>
@@ -83,7 +92,7 @@
 
 
           <div class="ventanilla" id="ventanilla">
-            <div id="cerrarVent"> <a href="javascript:cerrarVentana()"><img src="error.png" class="imgcerrar"></a> </div>
+            <div id="cerrarVent"> <a href="javascript:cerrarVentana()"><img src="pagPrincipal/error.png" class="imgcerrar"></a> </div>
               <h3>Registrarse</h3>
               <p>Complete el formulario</p>
             <form id="formCliente"> </form>
@@ -107,6 +116,8 @@
         <label for="dinero" class="form-label"><p id="monedaRecibida"></p></label>
       </form>
       </div>
+
+      <button id="botonCotizaciones">Pulsar para visualizar cotizaciones</button>
 
       <div id="divDolares"></div>
 
@@ -132,6 +143,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="scriptt.js"></script>
+<script src="pagPrincipal/scriptt.js"></script>
   </body>
 </html>
